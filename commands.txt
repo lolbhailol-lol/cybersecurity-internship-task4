@@ -1,0 +1,32 @@
+
+
+```bash
+# Install UFW if not already installed
+sudo apt install ufw -y
+
+# Check firewall status
+sudo ufw status
+
+# Enable firewall
+sudo ufw enable
+
+# Show current rules
+sudo ufw status numbered
+
+# Block Telnet port 23
+sudo ufw deny 23
+
+# Verify rules
+sudo ufw status numbered
+
+# Allow SSH port 22
+sudo ufw allow 22
+
+# Verify rules again
+sudo ufw status numbered
+
+# Remove deny rule for port 23 (replace <rule_number> with actual number)
+sudo ufw delete <rule_number>
+
+# Final status check (detailed)
+sudo ufw status verbose
